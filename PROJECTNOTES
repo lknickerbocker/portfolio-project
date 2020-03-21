@@ -1,0 +1,13 @@
+projectreadme
+
+create virtual env
+activate
+django-admin startproject 'project-name'
+navigate to project dir
+pip install django==2.2.*
+git init
+git add -A
+git commit -m "First Commit"
+test server
+python manage.py startapp blog
+python manage.py startapp jobs
