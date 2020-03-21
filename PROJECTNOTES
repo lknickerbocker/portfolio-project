@@ -26,3 +26,11 @@ python manage.py createsuperuser
 app folder: admin.py admin.site.register(Job)
 ######
 add static url etc to urls.py
+######
+set up postgres
+######
+add database to settings.py
+######
+install missing packages
+######
+runserver
