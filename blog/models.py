@@ -8,3 +8,11 @@ class Blog(models.Model):
     body = models.TextField(max_length=1000)
     pub_date = models.DateTimeField()
     
+    def __str__(self): ###object title in database
+        return self.title
+    
+    def summary(self): ####createsanewbodylimited to 100 
+        return self.body[:100]
+    
+    def pub_date_pretty(self): #customizes our date/time
+        return self.pub_date.strftime('%b %e %Y')

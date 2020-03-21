@@ -1,20 +1,28 @@
 <!doctype html>
 <html lang="en">
-{% load staticfiles %}
+    {% load staticfiles %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Lance Knickerbocker -- Portfolio</title>
+    <title>Lance Knickerbocker -- Blogs</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
 
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-   
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
 
 
     <style>
@@ -38,7 +46,8 @@
   </head>
   <body>
     <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ 
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="{% url 'home' %}">Lance Knickerbocker</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -47,44 +56,26 @@
     <div class="navbar-nav ml-auto">
       <a class="nav-item nav-link" href="http://www.twitter.com/lanceactually">Twitter</a>
       <a class="nav-item nav-link" href="{% static 'lance-resume.pdf' %}">Resume</a>
-      <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+      <a class="nav-item nav-link" href="#" active>Blog</a>
     </div>
   </div>
 </nav>
+        
 </header>
 
 <main role="main">
-
-  <section class="jumbotron text-center">
     <div class="container">
-      <h1>Hi, I'm Lance.</h1>
-        <img height=200 class="rounded-circle" src="{% static 'lance-photo.png' %}">
-        <br><br>
-      <p class="lead text-muted">This is my bio. This is a site I built as a place for my professional work. If you are unable to find what you're looking for, please send me an email. This is my bio. This is a site I built as a palce for my professional work. If you are unable to find what you're looking for, please send me an email. his is my bio. This is a site I built as a palce for my professional work. If you are unable to find what you're looking for, please send me an email.  </p>
-      <p>
-        <a href="mailto:lhknickerbocker@gmail.com" class="btn btn-primary my-2">Email Me</a>
-        </p>
-        
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row">
-          
-        {% for job in jobs.all %}
-          
-        <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{{ job.image.url }}">
-            <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
-            </div>
-        </div>
-      </div>
+    <h1 pt-10 class="text-center">BLOG</h1>
+  
+    <h2>Latest</h2>
+        {% for blog in blogs.all %}
+        <h3><a href="{% url 'detail' blog.id %}">{{ blog.title }}</a></h3>
+        <h4>{{ blog.pub_date_pretty }}</h4>
+        <img class="img-fluid"  width=500 height=300 src="{{ blog.image.url }}">
+        <p>{{ blog.summary }}</p>
+        <br>
         {% endfor %}
-
+    </div>    
 </main>
 
 <footer class="text-muted">
