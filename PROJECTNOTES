@@ -1,4 +1,6 @@
 projectreadme
+install virtual invironment
+pip3 install virtualenv
 
 create virtual env
 activate
@@ -34,3 +36,7 @@ add database to settings.py
 install missing packages
 ######
 runserver
+
+
+git push origin master
+git pull origin master
