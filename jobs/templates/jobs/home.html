@@ -34,7 +34,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
+    
   </head>
   <body>
     <header>
@@ -57,10 +57,12 @@
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h1>Hi, I'm Lance.</h1>
+      <h1>LANCE KNICKERBOCKER | WRITER</h1>
         <img height=200 class="rounded-circle" src="{% static 'lance-photo.png' %}">
         <br><br>
-      <p class="lead text-muted">This is my bio. This is a site I built as a place for my professional work. If you are unable to find what you're looking for, please send me an email. This is my bio. This is a site I built as a palce for my professional work. If you are unable to find what you're looking for, please send me an email. his is my bio. This is a site I built as a palce for my professional work. If you are unable to find what you're looking for, please send me an email.  </p>
+      <p class="lead text-muted">Freelance writer, copywriter, and communications specialist based out of Philadelphia.</p>
+        <p>Hi. How are you? Great. Welcome. This is where I'll be compiling links to my articles. From here you can quickly view work that demonstrates my interests and capabilities as a writer. I also earn a living solving communications challenges for clients. That, too, involves much writing so maybe I'll be sharing some of that work here in the future--after I ask my clients!</p>
+        
       <p>
         <a href="mailto:lhknickerbocker@gmail.com" class="btn btn-primary my-2">Email Me</a>
         </p>
@@ -73,23 +75,23 @@
 
       <div class="row">
           
-        {% for job in jobs.all %}
+            {% for job in jobs.all %}
           
-        <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{{ job.image.url }}">
-            <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <a href="{{ job.linktoarticle }}"><img class="card-img-top" src="{{ job.image.url }}"></a>
+                        <div class="card-body">
+                <p class="card-text">{{ job.summary }}</p>
+                        </div>
+                </div>
             </div>
-        </div>
-      </div>
         {% endfor %}
 
 </main>
 
 <footer class="text-muted">
   <div class="container" text-center>
-   <p>© Copyright Lance Knickerbocker {% now "Y" %}</p>
+   <p class="text-center">© Copyright Lance Knickerbocker {% now "Y" %}</p>
   </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
