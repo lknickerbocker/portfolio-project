@@ -2,7 +2,7 @@ projectreadme
 install virtual invironment
 pip3 install virtualenv
 
-create virtual env
+create virtual env: py -m venv env
 activate
 django-admin startproject 'project-name'
 navigate to project dir
