@@ -2,11 +2,11 @@
 <html lang="en">
 {% load staticfiles %}
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="Hi. How are you? I'm Lance Knickerbocker. I'm a professional freelance writer and communications specialist. This is my site.">
     <title>lance knickerbocker</title>
-     
- 
+
+
     <!-- Bootstrap core CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -27,7 +27,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    
+
   </head>
   <body>
     <header>
@@ -56,12 +56,11 @@
         <br><br>
       <p class="lead text-muted">Freelance writer, copywriter, and communications specialist based out of Philadelphia.</p>
         <p>Hi. How are you?</p>
-      <p>I am Lance Knickerbocker. I had time enough recently to consider the usefulness of a page containing links to my stories and articles. Maybe a blog or two. It seems wise to provide a single entryway to my work which, such as it is, might be difficult to locate scattered around the internet. So here we are. But where will we go?</p>
-        
+      <p>I'm trying not to think too much about what I write here. When I try to sum it up in a way that makes sense it all dissolves into a whirlpool of thoughts and shifting ideas and what comes out isn't worth your trouble. The point is thanks to our global pandemic I had time to consider the usefulness of a page containing links to my stories and articles. Maybe a blog or two. It seemed wise to provide a single entryway to my work which, such as it is, might be difficult to locate scattered around the internet. Only time can tell.</p>
       <p>
         <a href="mailto:lhknickerbocker@gmail.com" class="btn btn-primary my-2">email me</a>
         </p>
-        
+
     </div>
   </section>
 
@@ -69,9 +68,9 @@
     <div class="container">
 
       <div class="row">
-          
+
             {% for job in jobs.all %}
-          
+
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                     <a href="{{ job.linktoarticle }}"><img class="card-img-top" src="{{ job.image.url }}"></a>
