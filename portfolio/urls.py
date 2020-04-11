@@ -24,6 +24,5 @@ from jobs.views import robots_txt
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', jobs.views.home, name='home'),
-    path("robots.txt", jobs.views.robots_txt),
-    path('blog/', include('blog.urls')),
+    path("robots.txt", jobs.views.robots_txt, name='robots.txt'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
