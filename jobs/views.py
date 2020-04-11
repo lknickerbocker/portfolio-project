@@ -11,7 +11,6 @@ def home(request):
 def robots_txt(request):
     lines = [
         "User-Agent: *",
-        "Disallow: /private/",
-        "Disallow: /junk/",
+        "Disallow: /admin/",
     ]
     return HttpResponse("\n".join(lines), content_type="text/plain")
