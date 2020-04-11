@@ -18,6 +18,7 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 import jobs.views
+from jobs.views import robots_txt
 
 
 urlpatterns = [
