@@ -67,7 +67,7 @@
 
       <div class="row">
 
-            {% for job in jobs.all|dictsortreversed:"jobs.placeholder" %}
+            {% for job in jobs.all|dictsort:"placeholder" %}
 
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
